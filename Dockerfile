@@ -11,4 +11,4 @@ COPY /Config /Config
 
 EXPOSE 1883/tcp 9001/tcp
 
-VOLUME /etc/mosquitto
+VOLUME /etc/mosquitto /var/log/mosquitto/ /var/lib/mosquitto/
