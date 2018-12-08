@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+echo "###################################################"
+echo "Copying Files to /etc/mosquitto/"
+cp -r /Config/* /etc/mosquitto/
+echo "Starting MQTT Broker"
+exec \
+	s6-setuidgid root /bin/bash -c \
+	'/usr/sbin/mosquitto'
